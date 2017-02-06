@@ -5,13 +5,9 @@ api_version: 1
 threadsafe: yes
 
 handlers:
-- url: /favicon\.ico
-  static_files: favicon.ico
-  upload: favicon\.ico
-
-- url: /import
-  script: import.html
-  upload: favicon\.ico
+- url: /map
+  static_files: map.html
+  upload: map\.html
 
 libraries:
 - name: webapp2

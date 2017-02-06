@@ -18,6 +18,27 @@ import webapp2
 import csv
 import StringIO
 import json
+from google.appengine.ext import ndb
+
+class Account(ndb.Model):
+    username = ndb.StringProperty()
+    userid = ndb.IntegerProperty()
+    email = ndb.StringProperty()
+    ratings = ndb.Jsonroperty()
+
+PrecinctVotes(ndb.Model){
+  { "066/85": {
+      id = county + ' ' + precinct
+      "county": "Bronx",
+      "precinct": "066/85"
+      "votes": {
+        "Jill Stein / Ajamu Baraka": 2,
+        "Hillary Clinton / Tim Kaine": 519,
+        "Donald J. Trump / Michael R. Pence": 39,
+        "Gary Johnson / Bill Weld": 0 } },
+    "012/24": { … }, …
+  }
+}
 
 def process_csv_data(csv_data):
     precinct_to_votes ={}
